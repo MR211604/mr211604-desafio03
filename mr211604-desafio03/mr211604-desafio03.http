@@ -1,0 +1,6 @@
+@mr211604_desafio03_HostAddress = http://localhost:5070
+
+GET {{mr211604_desafio03_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
