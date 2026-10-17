@@ -24,4 +24,10 @@
     <PackageReference Include="System.Security.Cryptography.Pkcs" Version="10.0.13" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pedidos.Entities\Pedidos.Entities.csproj" />
+    <ProjectReference Include="..\Pedidos.DAL\Pedidos.DAL.csproj" />
+    <ProjectReference Include="..\Pedidos.BL\Pedidos.BL.csproj" />
+  </ItemGroup>
+
 </Project>

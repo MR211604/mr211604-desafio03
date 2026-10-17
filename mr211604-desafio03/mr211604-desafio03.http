@@ -1,6 +1,82 @@
-@mr211604_desafio03_HostAddress = http://localhost:5070
+@baseUrl = http://localhost:5070
 
-GET {{mr211604_desafio03_HostAddress}}/weatherforecast/
+### Clientes
+GET {{baseUrl}}/api/clientes
 Accept: application/json
 
 ###
+GET {{baseUrl}}/api/clientes/1
+Accept: application/json
+
+###
+POST {{baseUrl}}/api/clientes
+Content-Type: application/json
+
+{
+  "nombre": "Ana",
+  "apellido": "García",
+  "email": "ana.garcia@ejemplo.com"
+}
+
+###
+PUT {{baseUrl}}/api/clientes/1
+Content-Type: application/json
+
+{
+  "nombre": "Ana",
+  "apellido": "García López",
+  "email": "ana.garcia@ejemplo.com"
+}
+
+###
+DELETE {{baseUrl}}/api/clientes/1
+
+### Productos
+GET {{baseUrl}}/api/productos
+Accept: application/json
+
+###
+POST {{baseUrl}}/api/productos
+Content-Type: application/json
+
+{
+  "nombre": "Teclado mecánico",
+  "descripcion": "Teclado con switches azules y retroiluminación",
+  "precio": 89.90,
+  "stock": 15
+}
+
+###
+PUT {{baseUrl}}/api/productos/1
+Content-Type: application/json
+
+{
+  "nombre": "Teclado mecánico",
+  "descripcion": "Teclado con switches rojos",
+  "precio": 84.50,
+  "stock": 20
+}
+
+###
+DELETE {{baseUrl}}/api/productos/1
+
+### Pedidos
+GET {{baseUrl}}/api/pedidos
+Accept: application/json
+
+###
+GET {{baseUrl}}/api/pedidos/1
+Accept: application/json
+
+###
+POST {{baseUrl}}/api/pedidos
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "productoId": 1,
+  "cantidad": 2
+}
+
+###
+DELETE {{baseUrl}}/api/pedidos/1
